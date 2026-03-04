@@ -14,6 +14,7 @@ namespace bank.Controllers
         [HttpGet]
         [Route("getUser/{id}")]
 
+        // get user
         public IHttpActionResult GetUser(int id)
         {
             try
@@ -32,7 +33,7 @@ namespace bank.Controllers
             }
         }
 
-
+        // register user
         [HttpPost]
         [Route("register")]
         public IHttpActionResult RegisterUser(RegisterModel model)
@@ -50,6 +51,7 @@ namespace bank.Controllers
             }
         }
 
+        // creste acount
         [HttpPost]
         [Route("createAccount")]
         public IHttpActionResult CreateAccount(AccountModel model)
@@ -67,7 +69,7 @@ namespace bank.Controllers
             }
         }
 
-
+        // transfer money
         [HttpPost]
         [Route("transfer")]
         public IHttpActionResult TransferMoney(TransferModel model)
@@ -86,6 +88,7 @@ namespace bank.Controllers
         }
 
 
+        // add moeny
         [HttpPost]
         [Route("addMoney")]
         public IHttpActionResult AddMoney(AddMoneyModel model)

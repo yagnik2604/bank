@@ -11,7 +11,7 @@ namespace bank.DbHelper
     public class DbBMS
     {
         private string connectionString = "Server=Yagnik\\SQLEXPRESS;Database=masterDB;Trusted_Connection=True;";
-
+        // get all user
         public DataTable GetUser(int id)
         {
             using (var connection = new System.Data.SqlClient.SqlConnection(connectionString))
@@ -41,6 +41,7 @@ namespace bank.DbHelper
             }
         }
 
+        // register user
         public DataTable RegisterUser(RegisterModel model)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -63,6 +64,7 @@ namespace bank.DbHelper
             }
         }
 
+        // create account
         public DataTable CreateAccount(AccountModel model)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -83,6 +85,7 @@ namespace bank.DbHelper
         }
 
 
+        // transfer money
         public DataTable TransferMoney(TransferModel model)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -104,6 +107,7 @@ namespace bank.DbHelper
             }
         }
 
+        //  add moeny
         public DataTable AddMoney(AddMoneyModel model)
         {
             using (var connection = new SqlConnection(connectionString))
